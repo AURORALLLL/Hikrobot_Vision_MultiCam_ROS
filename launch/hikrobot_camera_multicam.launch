@@ -1,0 +1,10 @@
+<launch>
+    <!-- <rosparam file="$(find hikrobot_camera_multicam)/config/camera_multicam_0.yaml" command="load" /> -->
+    <node pkg="hikrobot_camera_multicam" type="hikrobot_camera_multicam" name="hikrobot_camera_multicam_0" respawn="true" output="screen">  
+        <rosparam file="$(find hikrobot_camera_multicam)/config/camera_multicam_0.yaml" command="load" />
+    </node>
+    
+    <node pkg="hikrobot_camera_multicam" type="hikrobot_camera_multicam" name="hikrobot_camera_multicam_1" respawn="true" output="screen">
+        <rosparam file="$(find hikrobot_camera_multicam)/config/camera_multicam_1.yaml" command="load" />
+    </node>
+</launch>
